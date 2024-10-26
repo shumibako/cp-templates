@@ -53,7 +53,7 @@ struct Trie
             int c = (int)(word[i] - base);
             int &next_id = nodes[node_id].next[c];
             if (next_id == -1)
-                return 0;
+                return i;
             if (nodes[next_id].common == 1)
                 return i;
             node_id = next_id;
